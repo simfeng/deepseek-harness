@@ -1,0 +1,20 @@
+# 真实运行组合（任务：number-to-words）。
+
+- id: hmr
+  name: '@deepseek-ai/cordis-plugin-hmr'
+  config:
+    root: ['.']
+
+- id: solver
+  name: './tasks/number-to-words/solver.ts'
+
+- id: evaluator
+  name: './tasks/number-to-words/evaluator.ts'
+
+- id: optimizer
+  name: './src/optimizer.ts'
+
+- id: base
+  name: '@deepseek-ai/cordis-plugin-include'
+  config:
+    path: ../headless-agent/cordis.yml

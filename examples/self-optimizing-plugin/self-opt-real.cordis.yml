@@ -1,0 +1,21 @@
+# 真实运行组合（默认任务：to-snake-case）。换任务 = 把下面 solver/evaluator 两行路径
+# 换成 tasks/<任务名>/ 下的对应文件；同时 run.sh 的第一个参数也改成该任务名。
+
+- id: hmr
+  name: '@deepseek-ai/cordis-plugin-hmr'
+  config:
+    root: ['.']
+
+- id: solver
+  name: './tasks/to-snake-case/solver.ts'
+
+- id: evaluator
+  name: './tasks/to-snake-case/evaluator.ts'
+
+- id: optimizer
+  name: './src/optimizer.ts'
+
+- id: base
+  name: '@deepseek-ai/cordis-plugin-include'
+  config:
+    path: ../headless-agent/cordis.yml

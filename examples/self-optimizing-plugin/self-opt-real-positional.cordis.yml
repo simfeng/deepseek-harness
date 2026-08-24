@@ -1,0 +1,20 @@
+# 真实运行组合（任务：positional-repeat）。
+
+- id: hmr
+  name: '@deepseek-ai/cordis-plugin-hmr'
+  config:
+    root: ['.']
+
+- id: solver
+  name: './tasks/positional-repeat/solver.ts'
+
+- id: evaluator
+  name: './tasks/positional-repeat/evaluator.ts'
+
+- id: optimizer
+  name: './src/optimizer.ts'
+
+- id: base
+  name: '@deepseek-ai/cordis-plugin-include'
+  config:
+    path: ../headless-agent/cordis.yml
